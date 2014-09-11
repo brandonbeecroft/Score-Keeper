@@ -41,6 +41,7 @@
     // UITextView
     UITextView *name = [[UITextView alloc] initWithFrame:CGRectMake(10, 30, 100, 40)];
 //    name.backgroundColor = [UIColor lightGrayColor];
+    name.placeholder = @"Name";
 
 
 

@@ -12,6 +12,7 @@
 
 @property (strong, nonatomic) UILabel *scoreLabel;
 @property (nonatomic) double stepValue;
+@property (nonatomic, strong) NSMutableArray *scoreLabels;
 
 @end
 
@@ -36,10 +37,10 @@
 - (void) addScoreView:(int)index {
 
     UIView *scoreView = [[UIView alloc] initWithFrame:CGRectMake(0, 100, self.view.frame.size.width, 100)];
-    scoreView.backgroundColor = [UIColor lightGrayColor];
+//    scoreView.backgroundColor = [UIColor lightGrayColor];
 
     // UITextView
-    UITextView *name = [[UITextView alloc] initWithFrame:CGRectMake(10, 30, 100, 40)];
+    UITextField *name = [[UITextField alloc] initWithFrame:CGRectMake(10, 30, 100, 40)];
 //    name.backgroundColor = [UIColor lightGrayColor];
     name.placeholder = @"Name";
 
@@ -51,6 +52,8 @@
     // UISTepper
     UIStepper *scoreStepper = [[UIStepper alloc] initWithFrame:CGRectMake(200, 38, 50, 50)];
     [scoreStepper addTarget:self action:@selector(changeLabelText) forControlEvents:UIControlEventValueChanged];
+    scoreStepper.maximumValue = 1000;
+    scoreStepper.minimumValue = -1000;
 
     [scoreView addSubview:name];
     [scoreView addSubview:self.scoreLabel];

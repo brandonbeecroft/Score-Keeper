@@ -8,7 +8,7 @@
 
 #import "SKViewController.h"
 
-@interface SKViewController () <UITextFieldDelegate>
+@interface SKViewController ()
 
 @property (strong, nonatomic) UILabel *scoreLabel;
 @property (nonatomic) double stepValue;

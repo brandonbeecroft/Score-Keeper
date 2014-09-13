@@ -53,6 +53,7 @@ CGFloat scoreViewHeight = 80;
     // UITextField - create fields! NOT UITextViews
     UITextField *name = [[UITextField alloc] initWithFrame:CGRectMake(10, 30, 100, 40)];
     name.placeholder = @"Name";
+    name.delegate = self;
 
     self.scoreLabel = [[UILabel alloc]initWithFrame:CGRectMake(140, 30, 200, 40)];
     self.scoreLabel.text = @"0";
